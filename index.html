@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Food Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Welcome to Swimato 😋</h1>
+        <p>Your favorite food delivered fast!!!</p>
+      </div>
+      <div id="cart-icon">
+        🛒 Cart: <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Order</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search food..." />
+    </div>
+
+    <div class="menu-grid">
+      <!-- Food Item 1 -->
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHp139uRJabuR_rZhklLWszJu8AD8yQ8WvTZnLDLRiXFGK7tDLROiUqx2_&s=10" alt="Chicken Biryani">
+        <h3>🥘 Chicken Biryani</h3>
+        <p>Grilled chicken with Hyderabadi rice, salad.</p>
+        <p>Price: ₹380</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+      <!-- Food Item 2 -->
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk_NRS-7kI3QUfj3gWID1mQGUs1VOLSUjAIE1HC2msNfVTTHyDiOhjsCKW&s=10" alt="Margherita Pizza">
+        <h3>🍕 Margherita Pizza</h3>
+        <p>Classic cheese and tomato pizza with basil.</p>
+        <p>Price: ₹250</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+      <!-- Food Item 3 -->
+      <div class="food-card">
+        <img src="https://bestvoted.ca/wp-content/uploads/2020/04/best-burger-in-mississauga.jpg" alt="Chicken Burger" height="280">
+        <h3>🍔 Chicken Burger</h3>
+        <p>Grilled chicken patty with lettuce and mayo.</p>
+        <p>Price: ₹180</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+      <!-- Food Item 4 -->
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAqr4BGR1gh6ghmb-7aI4ugqo28CizwWWA0BZzUgPpTqsDG2WJwKaVZbjb&s=10" alt="French Fries" height="280">
+        <h3>🍟 French Fries</h3>
+        <p>Deep fried potatoes with fry chilli sauce.</p>
+        <p>Price: ₹149</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+      <!-- Food Item 5 -->
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPicqzyeSgdQFDKdIG5DNMCwVUAy2NgoMhy3hWfZ4zqLNa91_DraJUGw&s=10" alt="Veg Salad" height="280">
+        <h3>🥗 Veg Salad</h3>
+        <p>Fresh and healthy green salad with dressing.</p>
+        <p>Price: ₹120</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+       <!-- Food Item 6 -->
+      <div class="food-card">
+        <img alt="Pahado Wali Maggi mixed vegetables" class="_3XS7H" height="280" loading="lazy" width="280" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/1f295091aca58ce7cc24d2436d8737e0" height="280">        
+        <h3>🍜 Masala Maggi</h3>
+        <p>Delicious and spicy veg maggi with fresh veggies</p>
+        <p>Price: ₹120</p>
+        <button class="order-btn">Order Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <button class="order-btn">More Items</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>2025 Swimato. All rights reserved.</p>
+    <div>
+      <a href="#">About Us</a> |
+      <a href="#">Careers</a> |
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Refund & Cancellation</a>
+    </div>
+    <p>Contact us: <a href="mailto:support@swimato.com">support@swimato.com</a></p>
+    <img alt="image" src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" loading="lazy" class="sc-s1isp7-5 fyZwWD" height="45">
+    <p>Follow us on: <a href="#">Instagram </a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+    <p>Open Hours: 10 AM - 11 PM, Monday to Sunday</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.getElementById("cart-count");
+    const cartButtons = document.querySelectorAll(".cart-btn");
+
+    cartButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        cartCount++;
+        cartCountElement.innerText = cartCount;
+      });
+    });
+  </script>
+
+</body>
+</html>
